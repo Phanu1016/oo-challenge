@@ -31,3 +31,21 @@ class Motorcycle extends Vehicle{
         return "VROOM!!!"
     }
 }
+
+// Garage
+class Garage{
+    constructor(capacity){
+        this.capacity = capacity
+        this.vehicles = []
+    }
+
+    add(vehicle){
+        if (!(vehicle instanceof Vehicle))
+            return "Only vehicles are allowed in here!"
+        else if(this.vehicles.length >= this.capacity){
+            return "Sorry, we're full."
+        }
+        this.vehicles.push(vehicle)
+        return "Vehicle added!"
+    }
+}
