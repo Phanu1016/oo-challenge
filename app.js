@@ -1,3 +1,4 @@
+// Vehicle
 class Vehicle{
     constructor(make, model, year){
         this.make = make
@@ -12,6 +13,7 @@ class Vehicle{
     }
 }
 
+// Car -> Vehicle
 class Car extends Vehicle{
     constructor(make, model, year){
         super(make, model, year)
@@ -19,3 +21,13 @@ class Car extends Vehicle{
     }
 }
 
+// Motorcycle -> Vehicle
+class Motorcycle extends Vehicle{
+    constructor(make, model, year){
+        super(make, model, year)
+        this.numWheels = 2
+    }
+    revEngine(){
+        return "VROOM!!!"
+    }
+}
